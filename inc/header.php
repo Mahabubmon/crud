@@ -70,6 +70,7 @@ $fontcolor = "#fff";
 
 		.tblone td {
 			padding: 5px 10px;
+			text-align: center;
 		}
 
 		table.tblone tr:nth-child(2n+1) {

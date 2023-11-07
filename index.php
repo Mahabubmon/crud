@@ -1,4 +1,15 @@
 <?php include 'inc/header.php'; ?>
+<?php 
+$db =  new Database();
+$query = "SELECT * FROM tbl_user";
+$read = ;
+
+?>
+
+
+
+
+
 <table class="tblone">
     <tr>
         <th width="25%">Serial</th>
