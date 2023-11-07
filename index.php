@@ -1,8 +1,12 @@
-<?php include 'inc/header.php'; ?>
-<?php 
-$db =  new Database();
+<?php
+include 'inc/header.php';
+include 'config.php';
+include 'Database.php';
+?>
+<?php
+$db = new Database();
 $query = "SELECT * FROM tbl_user";
-$read = ;
+$read = $db->select($query);
 
 ?>
 
