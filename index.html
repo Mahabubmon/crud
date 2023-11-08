@@ -82,10 +82,32 @@
           <h4 class="mt-2 text-primary">All users in Database!</h4>
         </div>
         <div class="col-lg-6">
-          <button type="button" class="btn btn-primary m-1 float-right">
+          <button type="button" class="btn btn-primary m-1 float-rights">
             <i class="fas fa-user-plus fa-lg"></i>
             &nbsp;&nbsp;Add New User
           </button>
+          <a href="#" class="btn btn-success m-1 float-right"
+            ><i class="fa fa-table fa-lg"></i>Export to Excel</a
+          >
+        </div>
+        <hr class="my-1" />
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="table-responsive" id="showUser">
+              <table class="table table-striped table-sm table-border">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
