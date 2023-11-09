@@ -122,8 +122,8 @@
         </div>
 
         <!-- Add New body -->
-        <div class="modal-body">
-          <form action="" method="post" id="form-data">
+        <div class="modal-body px-4">
+          <!-- <form action="" method="post" id="form-data">
             <div class="form-group">
               <input type="text" name="fname" class="form-control" placeholder="First Name" required>
             </div>
@@ -139,6 +139,26 @@
             <div class="form-group">
               <input type="submit" name="insert" id="insert" value="Add User" class="btn btn-danger btn-block" required>
             </div>
+          </form> -->
+          <form action="/action_page.php">
+            <div class="mb-3 mt-3">
+              <label for="fname" class="form-label">First Name:</label>
+              <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
+            </div>
+            <div class="mb-3">
+              <label for="lname" class="form-label">Last Name:</label>
+              <input type="text" class="form-control" id="lname" placeholder="Enter Last name" name="lname">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="tel" class="form-label">Phone:</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Enter Phone" name="phone">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
 
