@@ -117,19 +117,35 @@
 
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title">Add New User</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
 
         <!-- Add New body -->
         <div class="modal-body">
-          Modal body..
+          <form action="" method="post" id="form-data">
+            <div class="form-group">
+              <input type="text" name="fname" class="form-control" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" class="form-control" placeholder="Phone" required>
+            </div>
+            <div class="form-group">
+              <input type="submit" name="insert" id="insert" value="Add User" class="btn btn-danger btn-block" required>
+            </div>
+          </form>
         </div>
 
         <!-- Modal footer -->
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        </div>
+        </div> -->
 
         <!-- Latest compiled and minified CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
