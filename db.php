@@ -22,9 +22,30 @@ class Database
         $sql = "INSERT INTO users (first_name, last_name,email,phone) VALUES
         (:fname,:lname,:email,:phone)";
         $stmt = $this->conn->prepare($sql);
-        $stmt->execute(array['fname'=>$fname,'lname'=>$lname,'email'=>$email,'phone'=>$phone]);
+        $stmt->execute(['fname' => $fname, 'lname' => $lname, 'email' => $email, 'phone' => $phone]);
 
         return true;
+    }
+    public function read()
+    {
+        $data = array();
+        $sql = "SELECT * FROM users";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($result as $row) {
+            $data[] = $row;
+
+        }
+        return $data;
+    }
+    public function getUserById($id)
+    {
+        $sql = "SELECT * FROM users WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute(['id' => $id]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
     }
 }
 
