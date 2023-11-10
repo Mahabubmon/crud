@@ -47,6 +47,31 @@ class Database
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
+
+    public function update($id, $fname, $lname, $email, $phone)
+    {
+        $sql = "UPDATE users SET first_name=:fname, last_name=:lname,emai=:email,phone=:phone WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute(['fname' => $fname, 'lname' => $lname, 'email' => $email, 'phone' => $phone, 'id' => $id]);
+        return true;
+    }
+
+    public function delete($id)
+    {
+        $sql = "DELETE FROM users WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute(["id" => $id]);
+        return true;
+    }
+
+    public function totalRowCount()
+    {
+        $sql = "SELECT * FROM users";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $t_row = $stmt->rowCount();
+        return $t_row;
+    }
 }
 
 $obj = new Database();
