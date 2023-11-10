@@ -10,11 +10,16 @@ class Database
     {
         try {
             $this->conn = new PDO($this->dsn, $this->user, $this->pass);
-            echo 'Successfully Connected!';
+
 
         } catch (PDOEXception $e) {
             echo $e->getMessage();
         }
+    }
+
+    public function insert($fname, $lname, $email, $phone)
+    {
+        $sql = "INSERT INTO users (first_name, last_name,email,phone) VALUES(:fname,)";
     }
 }
 
