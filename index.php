@@ -103,22 +103,22 @@
           <form action="" method="post" id="form-data">
             <div class="mb-3 mt-3">
               <label for="fname" class="form-label">First Name:</label>
-              <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
+              <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" required>
             </div>
             <div class="mb-3">
               <label for="lname" class="form-label">Last Name:</label>
-              <input type="text" class="form-control" id="lname" placeholder="Enter Last name" name="lname">
+              <input type="text" class="form-control" id="lname" placeholder="Enter Last name" name="lname" required>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+              <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
             </div>
             <div class="mb-3">
               <label for="tel" class="form-label">Phone:</label>
-              <input type="tel" class="form-control" id="phone" placeholder="Enter Phone" name="phone">
+              <input type="tel" class="form-control" id="phone" placeholder="Enter Phone" name="phone" required>
             </div>
 
-            <button type="submit" id="insert" class="btn btn-primary">Submit</button>
+            <input type="submit" id="insert" class="btn btn-primary"></input>
           </form>
         </div>
 
@@ -171,7 +171,13 @@
                   type: "POST",
                   data: $("#form-data").serialize() + "&action=insert",
                   success: function (response) {
-                    console.log(response);
+                    Swal.fire({
+                      title: 'User Added Successfully',
+                      type: 'success'
+                    })
+                    $("#addModal").modal('hide');
+                    $("#form-data")[0].reset();
+                    showAllUsers();
                   }
                 });
               }
