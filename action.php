@@ -23,9 +23,28 @@ if (isset($_POST['action']) && $_POST['action'] == "view") {
               <tbody>';
 
         foreach ($data as $row) {
-           $output .= '<tr>'; 
-    }
+            $output .= '<tr class="text-center text-secondary">
+            <td>
+                ' . $row['id'] . '
+              </td>
+              <td>' . $row['first_name'] . '
+              </td>
+              <td>' . $row['last_name'] . '
+              </td>
+              <td>' . $row['email'] . '
+              </td>
+              <td>' . $row['phone'] . '
+              </td>
+             <td>
+                <a href="" title="View Details" class="text-success"><i class="fa-solid fa-eye"></i></a>&nbsp;&nbsp;
+                <a href="" title="Edit" class="text-primary"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp;&nbsp;
+                <a href="" title="Delete" class="text-danger"><i class="fa-solid fa-delete-left"></i></a>
+              </td>
+            
+            ';
+        }
 
+    }
 }
 
 
