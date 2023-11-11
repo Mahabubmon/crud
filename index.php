@@ -167,6 +167,8 @@
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         </div> -->
 
+
+
         <!-- Latest compiled and minified CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -177,7 +179,15 @@
         <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="index.js"></script>
+        <!-- <script src="/index.js"></script> -->
+        <script>
+          $(document).ready(function () {
+            $("table").DataTable("#example");
+
+
+          });
+
+        </script>
 </body>
 
 </html>

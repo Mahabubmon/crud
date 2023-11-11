@@ -19,7 +19,7 @@ class Database
 
     public function insert($fname, $lname, $email, $phone)
     {
-        $sql = "INSERT INTO users (first_name, last_name,email,phone) VALUES
+        $sql = "INSERT INTO users (first_name, last_name, email, phone) VALUES
         (:fname,:lname,:email,:phone)";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute(['fname' => $fname, 'lname' => $lname, 'email' => $email, 'phone' => $phone]);
@@ -50,7 +50,7 @@ class Database
 
     public function update($id, $fname, $lname, $email, $phone)
     {
-        $sql = "UPDATE users SET first_name=:fname, last_name=:lname,emai=:email,phone=:phone WHERE id = :id";
+        $sql = "UPDATE users SET first_name = :fname, last_name = :lname,emai = :email,phone = :phone WHERE id = :id";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute(['fname' => $fname, 'lname' => $lname, 'email' => $email, 'phone' => $phone, 'id' => $id]);
         return true;
@@ -60,7 +60,7 @@ class Database
     {
         $sql = "DELETE FROM users WHERE id = :id";
         $stmt = $this->conn->prepare($sql);
-        $stmt->execute(["id" => $id]);
+        $stmt->execute(['id' => $id]);
         return true;
     }
 
@@ -71,8 +71,13 @@ class Database
         $stmt->execute();
         $t_row = $stmt->rowCount();
         return $t_row;
+
     }
 }
 
-$obj = new Database();
+$ob = new Database();
+
+echo $ob->totalRowCount();
+
+
 ?>
