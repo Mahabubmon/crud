@@ -39,11 +39,16 @@ if (isset($_POST['action']) && $_POST['action'] == "view") {
                 <a href="" title="View Details" class="text-success"><i class="fa-solid fa-eye"></i></a>&nbsp;&nbsp;
                 <a href="" title="Edit" class="text-primary"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp;&nbsp;
                 <a href="" title="Delete" class="text-danger"><i class="fa-solid fa-delete-left"></i></a>
-              </td>
+              </td> 
+              </tr>
             
             ';
         }
+        $output .= '</tbody></table>';
+        echo $output;
 
+    } else {
+        echo '<h3 class="text-center text-seccondary mt-5">:(No any users present in the database!)</h3>';
     }
 }
 

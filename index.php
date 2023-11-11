@@ -64,38 +64,6 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="table-responsive" id="showUser">
-
-            <?php for ($i = 1; $i <= 100; $i++): ?>
-
-              <td>
-                <?php echo $i; ?>
-              </td>
-              <td>Name
-                <?= $i ?>
-              </td>
-              <td>Position
-                <?= $i ?>
-              </td>
-              <td>Office
-                <?= $i ?>
-              </td>
-              <td>Age
-                <?= $i ?>
-              </td>
-              <td>Start date
-                <?= $i ?>
-              </td>
-              <td>
-                <a href="" title="View Details" class="text-success"><i class="fa-solid fa-eye"></i></a>&nbsp;&nbsp;
-                <a href="" title="Edit" class="text-primary"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp;&nbsp;
-                <a href="" title="Delete" class="text-danger"><i class="fa-solid fa-delete-left"></i></a>
-              </td>
-              </tr>
-            <?php endfor; ?>
-            </tbody>
-            </table>
-            </tbody>
-            </table>
           </div>
         </div>
       </div>
@@ -184,10 +152,11 @@
                 type: "POST",
                 data: { action: "view" },
                 success: function (response) {
-                  console.log(response);
+                  // console.log(response);
+                  $("#showUser").html(response);
                 }
 
-              })
+              });
             }
 
 
