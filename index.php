@@ -100,7 +100,7 @@
               <input type="submit" name="insert" id="insert" value="Add User" class="btn btn-danger btn-block" required>
             </div>
           </form> -->
-          <form action="/action_page.php">
+          <form action="" method="post" id="form-data">
             <div class="mb-3 mt-3">
               <label for="fname" class="form-label">First Name:</label>
               <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
@@ -118,7 +118,7 @@
               <input type="tel" class="form-control" id="phone" placeholder="Enter Phone" name="phone">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="insert" class="btn btn-primary">Submit</button>
           </form>
         </div>
 
@@ -142,7 +142,7 @@
         <!-- <script src="/index.js"></script> -->
         <script>
           $(document).ready(function () {
-            $("table").DataTable("#example");
+
 
             showAllUsers();
             function showAllUsers() {
@@ -154,12 +154,28 @@
                 success: function (response) {
                   // console.log(response);
                   $("#showUser").html(response);
+                  $("table").DataTable({
+                    order: [0, 'desc']
+                  });
                 }
 
               });
             }
 
-
+            // inser ajax request
+            $("#insert").click(function (e) {
+              if ($("#form-data")[0].checkVisibility()) {
+                e.preventDefault();
+                $.ajax({
+                  url: "action.php",
+                  type: "POST",
+                  data: $("#form-data").serialize() + "&action=insert",
+                  success: function (response) {
+                    console.log(response);
+                  }
+                });
+              }
+            });
 
           });
 
