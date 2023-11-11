@@ -52,5 +52,14 @@ if (isset($_POST['action']) && $_POST['action'] == "view") {
     }
 }
 
+if (isset($_POST['action']) && $_POST['action'] == 'insert') {
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+
+    $db->insert($fname, $lname, $email, $phone);
+}
+
 
 ?>
