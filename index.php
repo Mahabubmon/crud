@@ -184,6 +184,21 @@
           $(document).ready(function () {
             $("table").DataTable("#example");
 
+            showAllUsers();
+            function showAllUsers() {
+
+              $.ajax({
+                url: "action.php",
+                type: "POST",
+                data: { action: "view" },
+                success: function (response) {
+                  console.log(response);
+                }
+
+              })
+            }
+
+
 
           });
 

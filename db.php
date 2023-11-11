@@ -1,6 +1,9 @@
 <?php
 class Database
 {
+
+
+
     private $dsn = "mysql:host=localhost;dbname=crud";
     private $user = "root";
     private $pass = "";
@@ -74,10 +77,6 @@ class Database
 
     }
 }
-
-$ob = new Database();
-
-echo $ob->totalRowCount();
 
 
 ?>
