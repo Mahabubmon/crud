@@ -219,6 +219,15 @@
                     }
                   });
 
+                  $("body").on("click", ".editBtn", function (e) {
+                    e.preventDefault();
+                    edit_id = $(this).arr('id');
+                    $.ajax({
+
+                    })
+
+                  });
+
                 });
 
               </script>
