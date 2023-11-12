@@ -5,10 +5,10 @@ $db = new Database();
 
 if (isset($_POST['action']) && $_POST['action'] == "view") {
 
-    $output = '';
-    $data = $db->read();
-    if ($db->totalRowCount() > 0) {
-        $output .= '<table id="example" class="table table-striped" style="width: 100%">
+  $output = '';
+  $data = $db->read();
+  if ($db->totalRowCount() > 0) {
+    $output .= '<table id="example" class="table table-striped" style="width: 100%">
               <thead>
 
                 <tr>
@@ -22,8 +22,8 @@ if (isset($_POST['action']) && $_POST['action'] == "view") {
               </thead>
               <tbody>';
 
-        foreach ($data as $row) {
-            $output .= '<tr class="text-center text-secondary">
+    foreach ($data as $row) {
+      $output .= '<tr class="text-center text-secondary">
             <td>
                 ' . $row['id'] . '
               </td>
@@ -36,29 +36,31 @@ if (isset($_POST['action']) && $_POST['action'] == "view") {
               <td>' . $row['phone'] . '
               </td>
              <td>
-                <a href="" title="View Details" class="text-success"><i class="fa-solid fa-eye"></i></a>&nbsp;&nbsp;
-                <a href="" title="Edit" class="text-primary"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp;&nbsp;
-                <a href="" title="Delete" class="text-danger"><i class="fa-solid fa-delete-left"></i></a>
+                <a href="" title="View Details" class="text-success infoBtn"><i class="fa-solid fa-eye"></i></a>&nbsp;&nbsp;
+
+                <a href="" title="Edit" class="text-primary editBtn" data-bs-toggle="modal" data-bs-target="#editModal"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp;&nbsp;
+
+                <a href="" title="Delete" class="text-danger delBtn"><i class="fa-solid fa-delete-left"></i></a>
               </td> 
               </tr>
             
             ';
-        }
-        $output .= '</tbody></table>';
-        echo $output;
-
-    } else {
-        echo '<h3 class="text-center text-seccondary mt-5">:(No any users present in the database!)</h3>';
     }
+    $output .= '</tbody></table>';
+    echo $output;
+
+  } else {
+    echo '<h3 class="text-center text-seccondary mt-5">:(No any users present in the database!)</h3>';
+  }
 }
 
 if (isset($_POST['action']) && $_POST['action'] == 'insert') {
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];
 
-    $db->insert($fname, $lname, $email, $phone);
+  $db->insert($fname, $lname, $email, $phone);
 }
 
 

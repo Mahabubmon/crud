@@ -71,7 +71,7 @@
   </div>
 
   <!-- Add New user  Modal -->
-  <div class="modal" id="addModal">
+  <div class="modal fade" id="addModal">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
 
@@ -126,45 +126,41 @@
         <!-- <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         </div> -->
-
-
-        <!-- Add New user  Modal -->
-        <div class="modal" id="addModal">
+        <!-- Update user  Modal -->
+        <div class="modal fade" id="editModal">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
 
               <!-- Modal Header -->
               <div class="modal-header">
-                <h4 class="modal-title">Add New User</h4>
+                <h4 class="modal-title">Edite user</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
               </div>
 
               <!-- Add New body -->
               <div class="modal-body px-4">
-                <form action="" method="post" id="form-data">
+                <form action="" method="post" id="edit-form-data">
+                  <input type="hidden" name="id" id="id">
                   <div class="mb-3 mt-3">
                     <label for="fname" class="form-label">First Name:</label>
-                    <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname"
-                      required>
+                    <input type="text" class="form-control" id="fname" name="fname" required>
                   </div>
                   <div class="mb-3">
                     <label for="lname" class="form-label">Last Name:</label>
-                    <input type="text" class="form-control" id="lname" placeholder="Enter Last name" name="lname"
-                      required>
+                    <input type="text" class="form-control" id="lname" name="lname" required>
                   </div>
                   <div class="mb-3">
                     <label for="email" class="form-label">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+                    <input type="email" class="form-control" id="email" name="email" required>
                   </div>
                   <div class="mb-3">
                     <label for="tel" class="form-label">Phone:</label>
-                    <input type="tel" class="form-control" id="phone" placeholder="Enter Phone" name="phone" required>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
                   </div>
 
-                  <input type="submit" id="insert" class="btn btn-primary"></input>
+                  <input type="submit" id="update" name="update" class="btn btn-primary"></input>
                 </form>
               </div>
-
 
 
 
