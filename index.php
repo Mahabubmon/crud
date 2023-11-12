@@ -126,6 +126,7 @@
         <!-- <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         </div> -->
+
         <!-- Update user  Modal -->
         <div class="modal fade" id="editModal">
           <div class="modal-dialog modal-dialog-centered">
