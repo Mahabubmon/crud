@@ -36,11 +36,14 @@ if (isset($_POST['action']) && $_POST['action'] == "view") {
               <td>' . $row['phone'] . '
               </td>
              <td>
-                <a href="" title="View Details" class="text-success infoBtn"><i class="fa-solid fa-eye"></i></a>&nbsp;&nbsp;
+                <a href="" title="View Details" class="text-success infoBtn"
+                id="' . $row['id'] . '"><i class="fa-solid fa-eye"></i></a>&nbsp;&nbsp;
 
-                <a href="" title="Edit" class="text-primary editBtn" data-bs-toggle="modal" data-bs-target="#editModal"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp;&nbsp;
+                <a href="" title="Edit" class="text-primary editBtn" data-bs-toggle="modal" data-bs-target="#editModal"
+                id="' . $row['id'] . '"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp;&nbsp;
 
-                <a href="" title="Delete" class="text-danger delBtn"><i class="fa-solid fa-delete-left"></i></a>
+                <a href="" title="Delete" class="text-danger delBtn"
+                id="' . $row['id'] . '"><i class="fa-solid fa-delete-left"></i></a>
               </td> 
               </tr>
             

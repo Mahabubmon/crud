@@ -159,7 +159,7 @@
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                   </div>
 
-                  <input type="submit" id="update" name="update" class="btn btn-primary"></input>
+                  <input type="submit" id="update" name="update" class="btn btn-primary" value="update user"></input>
                 </form>
               </div>
 
