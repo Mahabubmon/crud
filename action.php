@@ -64,6 +64,13 @@ if (isset($_POST['action']) && $_POST['action'] == 'insert') {
   $phone = $_POST['phone'];
 
   $db->insert($fname, $lname, $email, $phone);
+
+}
+
+if (isset($_POST['edit_id'])) {
+  $id = $_POST['edit_id'];
+
+  $row = $db->getUserById($id);
 }
 
 

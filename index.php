@@ -223,6 +223,12 @@
                     e.preventDefault();
                     edit_id = $(this).arr('id');
                     $.ajax({
+                      url: "action.php";
+                      type: "POST",
+                      data: { edit_id: edit_id };
+                      success: function (response) {
+
+                      }
 
                     })
 
