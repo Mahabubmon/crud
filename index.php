@@ -128,64 +128,103 @@
         </div> -->
 
 
+        <!-- Add New user  Modal -->
+        <div class="modal" id="addModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
 
-        <!-- Latest compiled and minified CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Add New User</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              </div>
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+              <!-- Add New body -->
+              <div class="modal-body px-4">
+                <form action="" method="post" id="form-data">
+                  <div class="mb-3 mt-3">
+                    <label for="fname" class="form-label">First Name:</label>
+                    <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname"
+                      required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="lname" class="form-label">Last Name:</label>
+                    <input type="text" class="form-control" id="lname" placeholder="Enter Last name" name="lname"
+                      required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="tel" class="form-label">Phone:</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter Phone" name="phone" required>
+                  </div>
 
-        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-        <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <!-- <script src="/index.js"></script> -->
-        <script>
-          $(document).ready(function () {
+                  <input type="submit" id="insert" class="btn btn-primary"></input>
+                </form>
+              </div>
 
 
-            showAllUsers();
-            function showAllUsers() {
 
-              $.ajax({
-                url: "action.php",
-                type: "POST",
-                data: { action: "view" },
-                success: function (response) {
-                  // console.log(response);
-                  $("#showUser").html(response);
-                  $("table").DataTable({
-                    order: [0, 'desc']
-                  });
-                }
 
-              });
-            }
+              <!-- Latest compiled and minified CSS -->
+              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-            // inser ajax request
-            $("#insert").click(function (e) {
-              if ($("#form-data")[0].checkVisibility()) {
-                e.preventDefault();
-                $.ajax({
-                  url: "action.php",
-                  type: "POST",
-                  data: $("#form-data").serialize() + "&action=insert",
-                  success: function (response) {
-                    Swal.fire({
-                      title: 'User Added Successfully',
-                      type: 'success'
-                    })
-                    $("#addModal").modal('hide');
-                    $("#form-data")[0].reset();
-                    showAllUsers();
+              <!-- Latest compiled JavaScript -->
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+              <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+              <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+              <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+              <!-- <script src="/index.js"></script> -->
+              <script>
+                $(document).ready(function () {
+
+
+                  showAllUsers();
+                  function showAllUsers() {
+
+                    $.ajax({
+                      url: "action.php",
+                      type: "POST",
+                      data: { action: "view" },
+                      success: function (response) {
+                        // console.log(response);
+                        $("#showUser").html(response);
+                        $("table").DataTable({
+                          order: [0, 'desc']
+                        });
+                      }
+
+                    });
                   }
+
+                  // inser ajax request
+                  $("#insert").click(function (e) {
+                    if ($("#form-data")[0].checkVisibility()) {
+                      e.preventDefault();
+                      $.ajax({
+                        url: "action.php",
+                        type: "POST",
+                        data: $("#form-data").serialize() + "&action=insert",
+                        success: function (response) {
+                          Swal.fire({
+                            title: 'User Added Successfully',
+                            type: 'success'
+                          })
+                          $("#addModal").modal('hide');
+                          $("#form-data")[0].reset();
+                          showAllUsers();
+                        }
+                      });
+                    }
+                  });
+
                 });
-              }
-            });
 
-          });
-
-        </script>
+              </script>
 </body>
 
 </html>
