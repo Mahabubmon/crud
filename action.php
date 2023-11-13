@@ -39,7 +39,7 @@ if (isset($_POST['action']) && $_POST['action'] == "view") {
                 <a href="" title="View Details" class="text-success infoBtn"
                 id="' . $row['id'] . '"><i class="fa-solid fa-eye"></i></a>&nbsp;&nbsp;
 
-                <a href="" title="Edit" class="text-primary editBtn" data-bs-toggle="modal" data-bs-target="#editModal"
+                <a href="" title="Edit" class="text-primary editBtn" data-bs-toggle="modal" data-bs-target="#addModal"
                 id="' . $row['id'] . '"><i class="fa-solid fa-pen-to-square"></i></a>&nbsp;&nbsp;
 
                 <a href="" title="Delete" class="text-danger delBtn"
@@ -71,6 +71,7 @@ if (isset($_POST['edit_id'])) {
   $id = $_POST['edit_id'];
 
   $row = $db->getUserById($id);
+  echo json_encoded($row);
 }
 
 
