@@ -141,6 +141,7 @@
               <!-- Add New body -->
               <div class="modal-body px-4">
                 <form action="" method="post" id="edit-form-data">
+                  <input type="hidden" name="" id="id">
                   <input type="hidden" name="id" id="id">
                   <div class="mb-3 mt-3">
                     <label for="fname" class="form-label">First Name:</label>
@@ -178,7 +179,7 @@
               <!-- <script src="/index.js"></script> -->
               <script>
                 $(document).ready(function () {
-
+                  new DataTable("#example");
 
                   showAllUsers();
                   function showAllUsers() {
@@ -227,10 +228,16 @@
                       type: "POST",
                       data: { edit_id: edit_id };
                       success: function (response) {
+                        data = JSON.parse(response);
+                        $("#id").val(data.id);
+                        $("#fname").val(data.first_name);
+                        $("#lname").val(data.last_name);
+                        $("#email").val(data.email);
+                        $("#phone").val(data.phone);
 
                       }
 
-                    })
+                    });
 
                   });
 
