@@ -16,7 +16,7 @@
 <body>
 
   <!-- //Add New User Modal -->
-  <div class="modal" tabindex="-1" id="addNewUserModal">
+  <div class="modal fade" tabindex="-1" id="addNewUserModal">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -26,7 +26,6 @@
         <div class="modal-body">
           <p>Modal body text goes here.</p>
         </div>
-
       </div>
     </div>
   </div>
@@ -36,10 +35,12 @@
     <div class="row mt-4">
       <div class="col-lg-12 d-flex justify-content-between align-items-center">
         <div>
-          <h4 class="text-primary">All users in the database</h4>
+          <h4 class="text-primary">All users in the
+            database</h4>
         </div>
         <div>
-          <button class="btn btn-primary">Add New User</button>
+          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#addNewUserModal">Add New
+            User</button>
         </div>
       </div>
     </div>
