@@ -1,5 +1,5 @@
 const addForm = document.getElementById("add-user-form");
-
+const showAlert = document.getElementById("showAlert");
 //Add New User ajax Request
 addForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -19,6 +19,9 @@ addForm.addEventListener("submit", async (e) => {
       body: formData,
     });
     const response = await data.text();
-    console.log(response);
+    showAlert.innerHTML = response;
+    document.getElementById("add-user-btn").value = "Add User";
+    addForm.requestFullscreen();
+    addForm.classList.remove("was-validated");
   }
 });
