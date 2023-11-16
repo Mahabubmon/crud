@@ -13,7 +13,8 @@
         <h1>Ajax CRUD</h1>
         <input type="text" placeholder="enter Name..."><br>
         <input type="email" placeholder="enter Email..."><br>
-        <input type="text" placeholder="enter Password..."><br>
+        <input type="text" placeholder="enter Password..."><br><br>
+        <button class="btn">Insert Data</button>
 
     </div>
 

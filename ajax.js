@@ -1,1 +1,1 @@
-$("button").click(function () {});
+$(".btn").click(function () {});

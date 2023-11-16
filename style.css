@@ -9,5 +9,22 @@
 
 h1{
    color: black;
+   font-size: 1.7rem;
 
+}
+
+input{
+    width: 90%;
+    padding: 10px;
+    margin-top:7px;
+
+
+}
+.btn{
+    width: 90%;
+    color: aliceblue;
+    background-color: blueviolet;
+    font-size:1.5rem;
+    padding: 10px;
+    cursor: pointer;
 }
