@@ -1,4 +1,4 @@
-//insert Data
+//insert Data start
 $(".btn").click(function () {
   var name = $("#name").val();
   var email = $("#email").val();
@@ -9,7 +9,23 @@ $(".btn").click(function () {
     url: "action.php",
     data: { name: name, email: email, pass: pass },
     success: function (data) {
-      alert(data);
+      read();
     },
   });
 });
+//insert Data end
+
+//Read  Data start
+function read() {
+  var read = "";
+  $.ajax({
+    url: "read.php",
+    method: "POST",
+    data: { read: read },
+    success: function (data) {
+      $("#tbody").html(data);
+    },
+  });
+}
+
+//Read  Data end

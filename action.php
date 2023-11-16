@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "", "ajax");
+require_once 'db.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $pass = $_POST['pass'];
@@ -13,5 +13,8 @@ if ($query) {
 } else {
     echo "Data  Not Inserted";
 }
+
+
+
 
 ?>
