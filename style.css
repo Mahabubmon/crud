@@ -1,0 +1,13 @@
+.container{
+    width:700px;
+    height: 700px;;
+    box-shadow: 4px 5px 10px black;
+    background-color: aquamarine;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1{
+   color: black;
+
+}
