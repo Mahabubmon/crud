@@ -18,9 +18,11 @@
         <h1>Reading Data From Databse</h1>
         <table>
             <thead>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Password</th>
+                <th>Action</th>
             <tbody id="tbody">
 
             </tbody>

@@ -6,6 +6,9 @@ $ex = mysqli_query($connect, $select);
 while ($row = mysqli_fetch_array($ex)) { ?>
     <tr>
         <td>
+            <?php echo $row['id']; ?>
+        </td>
+        <td>
             <?php echo $row['Name']; ?>
         </td>
         <td>
@@ -14,6 +17,7 @@ while ($row = mysqli_fetch_array($ex)) { ?>
         <td>
             <?php echo $row['pass']; ?>
         </td>
+        <td><button onclick="Delete(<?php echo $row['id']; ?>)">DELETE</button></td>
     </tr>
 <?php }
 

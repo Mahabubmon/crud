@@ -29,3 +29,14 @@ function read() {
 }
 
 //Read  Data end
+
+//delete  Data start
+function Delete(userId) {
+  $.ajax({
+    url: "delete.php",
+    method: "POST",
+    data: { userId: userId },
+    success: function () {},
+  });
+}
+//delete  Data end
