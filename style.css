@@ -28,3 +28,15 @@ input{
     padding: 10px;
     cursor: pointer;
 }
+
+table{
+    width: 100%;
+
+}
+table,th,td{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    border-collapse: collapse;
+}

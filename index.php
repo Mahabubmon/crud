@@ -15,8 +15,14 @@
         <input type="email" id="email" placeholder="enter Email..."><br>
         <input type="text" id="pass" placeholder="enter Password..."><br><br>
         <button class="btn">Insert Data</button>
-
-        <div id="reload"></div>
+        <h1>Reading Data From Databse</h1>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </thead>
+        </table>
     </div>
 
 
