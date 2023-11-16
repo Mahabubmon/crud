@@ -6,7 +6,7 @@ $pass = $_POST['pass'];
 
 
 $insert = "INSERT INTO ajax (Name,Email,pass)
-VALUES($name,$email,$pass)";
+VALUES('$name','$email','$pass')";
 $query = mysqli_query($connect, $insert);
 if ($query) {
     echo "Data Insert Successfully";

@@ -1,3 +1,4 @@
+//insert Data
 $(".btn").click(function () {
   var name = $("#name").val();
   var email = $("#email").val();
@@ -8,7 +9,7 @@ $(".btn").click(function () {
     url: "action.php",
     data: { name: name, email: email, pass: pass },
     success: function (data) {
-      $("#reload").html(data);
+      alert(data);
     },
   });
 });
