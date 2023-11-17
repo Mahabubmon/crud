@@ -32,11 +32,16 @@ function read() {
 
 //delete  Data start
 function Delete(userId) {
-  $.ajax({
-    url: "delete.php",
-    method: "POST",
-    data: { userId: userId },
-    success: function () {},
-  });
+  $con = confirm("Are You Sure");
+  if ($con == true) {
+    $.ajax({
+      url: "delete.php",
+      method: "POST",
+      data: { userId: userId },
+      success: function () {
+        read();
+      },
+    });
+  }
 }
 //delete  Data end
