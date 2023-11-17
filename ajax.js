@@ -70,7 +70,9 @@ function UPDATE_DATA(userId) {
     url: "updatequery.php",
     method: "GET",
     data: { name: name, email: email, pass: pass, userId: userId },
-    success: function () {},
+    success: function (data) {
+      alert(data);
+    },
   });
 }
 //Update  Data end

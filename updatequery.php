@@ -7,7 +7,7 @@ $pass = $_GET['pass'];
 $id = $_GET['userId'];
 
 $update = "UPDATE ajax SET Name='$name',Email='$email',pass='$pass' WHERE id='$id'";
-$ex = mysqli_query($connect, $ex);
+$ex = mysqli_query($connect, $update);
 if ($ex) {
     echo "Update success";
 } else {
