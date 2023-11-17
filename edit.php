@@ -14,14 +14,7 @@ $row = mysqli_fetch_array($ex);
 
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .edit {
-            background-color: tomato;
-            color: white;
-            font-size: 1.2rem;
-            padding: 10px 20px;
-        }
-    </style>
+
 </head>
 
 <body>
@@ -31,6 +24,7 @@ $row = mysqli_fetch_array($ex);
         <input type="email" id="email" value="<?php echo $row['Email']; ?>" placeholder="enter Email..."><br>
         <input type="text" id="pass" value="<?php echo $row['pass']; ?>" placeholder="enter Password..."><br><br>
         <button class="edit" onclick="UPDATE_DATA(<?php echo $row['id']; ?>)">Edit</button>
+        <button class="edit" onclick="home()">Home</button>
 
 
 </body>
