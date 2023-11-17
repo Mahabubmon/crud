@@ -54,7 +54,7 @@ function Edit(userId) {
   $.ajax({
     url: "edit.php",
     method: "GET",
-    data: { name: name, email: email, pass: pass, userId: userId },
+    data: { userId: userId },
     success: function (data) {
       $("body").html(data);
     },
