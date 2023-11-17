@@ -61,3 +61,16 @@ function Edit(userId) {
   });
 }
 //edit  Data end
+//Update  Data start
+function UPDATE_DATA(userId) {
+  var name = $("#name").val();
+  var email = $("#email").val();
+  var pass = $("#pass").val();
+  $.ajax({
+    url: "updatequery.php",
+    method: "GET",
+    data: { name: name, email: email, pass: pass, userId: userId },
+    success: function () {},
+  });
+}
+//Update  Data end
