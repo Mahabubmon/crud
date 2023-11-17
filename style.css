@@ -40,3 +40,15 @@ table,th,td{
     border: 1px solid white;
     border-collapse: collapse;
 }
+#del{
+    background-color: tomato;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+.edit{
+    background-color: tomato;
+        color: white;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+}

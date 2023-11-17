@@ -22,7 +22,8 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Password</th>
-                <th>Action</th>
+                <th>Delete</th>
+                <th>Edit</th>
             <tbody id="tbody">
 
             </tbody>

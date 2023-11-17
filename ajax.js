@@ -45,3 +45,19 @@ function Delete(userId) {
   }
 }
 //delete  Data end
+//edit  Data start
+function Edit(userId) {
+  var name = $("#name").val();
+  var email = $("#email").val();
+  var pass = $("#pass").val();
+
+  $.ajax({
+    url: "edit.php",
+    method: "GET",
+    data: { name: name, email: email, pass: pass, userId: userId },
+    success: function (data) {
+      $("body").html(data);
+    },
+  });
+}
+//edit  Data end
