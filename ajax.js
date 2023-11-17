@@ -76,3 +76,15 @@ function UPDATE_DATA(userId) {
   });
 }
 //Update  Data end
+
+$(".read").click(function () {
+  var read = "";
+  $.ajax({
+    url: "read.php",
+    method: "POST",
+    data: { read: read },
+    success: function (data) {
+      $("#tbody").html(data);
+    },
+  });
+});

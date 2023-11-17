@@ -14,7 +14,8 @@
         <input type="text" id="name" placeholder="enter Name..."><br>
         <input type="email" id="email" placeholder="enter Email..."><br>
         <input type="text" id="pass" placeholder="enter Password..."><br><br>
-        <button class="btn">Insert Data</button>
+        <button class="btn">Insert Data</button><br><br>
+        <button class="read">read</button>
         <h1>Reading Data From Databse</h1>
         <table>
             <thead>
